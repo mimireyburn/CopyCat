@@ -1,5 +1,5 @@
-# Audify
-*A text-to-speech application for improved reading comprehension.*
+# CopyCat
+*A text-to-speech application to help with reading comprehension. (It reads out the most recent things you copied)*
 
 This Python application allows you to convert highlighted text to speech using OpenAI's Text-to-Speech API. It works by capturing the text held most recently in the Clipboard when a specific hotkey is pressed, converting it to speech, and then playing the audio.
 
