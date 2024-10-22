@@ -1,12 +1,14 @@
 # CopyCat
-*A text-to-speech application to help with reading comprehension. (It reads out the most recent things you copied)*
+*A text-to-speech application for improved reading comprehension - it's a screen reader :)*
 
 This Python application allows you to convert highlighted text to speech using OpenAI's Text-to-Speech API. It works by capturing the text held most recently in the Clipboard when a specific hotkey is pressed, converting it to speech, and then playing the audio.
 
 ## Motivation
-You might think this is not for you, but this tool seeks to benefit everyone. It is **easier to comprehend written information with combined audiorty and visual input**. This means we comprehend written information better, when we read and listen to it at the same time. I.e. listening to the audiobook and following along with the physical book at the same time. 
+I find it **easier to comprehend text when I read and listen to it at the same time**. I'll often listen to an audiobook and follow along in the book at the same time. I'd recommend trying it and seeing if it works well for you too!
 
-Where did I get this idea? I am dyslexic and when I was diagnosed at the ripe old age of 18, it was suggested that exactly this method would help me and it did. However, as a user, I feel I'm getting a subpar experience. 
+Why do I do this? I am dyslexic and when I was diagnosed at the ripe old age of 18, it was suggested that exactly this method would help me and it did. I find the intonation in the audio version of a text helps me get the meaning first time, reading less tiring this way and I comprehend more from the text the first time I read it. 
+
+However, as a user, I feel I'm getting a subpar experience. 
 
 - Despite major AI advancements, OS system Text-to-Speech accessibility tool are still **robotic** sounding. This makes it **less easy to process** than more natural-sounding AI -generated speech.
 - The right click interface kind of sucks. It **doesn't work on all applications**.
@@ -14,16 +16,16 @@ Where did I get this idea? I am dyslexic and when I was diagnosed at the ripe ol
 So, I created this terminal application to play any text that I highlighted, so I can have any text on my laptop read back to me. 🍰
 
 ### A note on NotebookLM. 
-The above reasons lend themselves to why NotebookLM podcasts are so great - making written information available to other parts of the brain and diversifying the formats of information makes it easier to comprehend. As a dyslexic, the whole NotebookLM tool has made it considerably easier for me to comprehend written information and goes to show that designing for accessibility sets to benefit us all.
+The above reasons lend themselves to why NotebookLM podcasts are so great - making written information available to other parts of the brain and diversifying the formats of information makes it easier to comprehend. It goes to show that designing for accessibility sets to benefit us all.
 
-Given that I work in AI, I depend on keeping up with scientific papers and innovations. Tools like these have made my life a lot easier.
+Given that I work in AI, I depend on keeping up with research papers, which are typically dense, jargon heavy and hard-to-follow, even if you're not dyslexic! Any tools that make texts easier to follow and understand (more accessible!) make my life a lot easier.
 
 ## Features
 
 - Capture copied text from any application 
 - Convert text to speech using OpenAI's TTS-1 model
 - Play generated speech through your computer's audio output
-- Easy-to-use hotkey activation (Command + Shift + E on macOS)
+- Easy-to-use hotkey activation (F8 to run TTS and play, F9 to pause/play on macOS)
 
 ## Prerequisites
 
@@ -60,16 +62,19 @@ Before you begin, ensure you have met the following requirements:
 
 3. In any application, highlight and copy the text you want to convert to speech (Cmd+C on MacOS).
 
-4. Press Command + Shift + E (on macOS) to activate the text-to-speech conversion.
+4. Press F8 (on macOS) to activate the text-to-speech conversion.
 
 5. The highlighted text will be captured, converted to speech, and played through your computer's audio output.
 
-6. To exit the application, press the Esc key.
+6. Pause/resume the audio with F9
 
-## Customization
+7. To exit the application, press the Esc key.
+
+## Customisation
 
 - To change the hotkey, modify the `HOTKEY` variable in the script.
 - To use a different voice, change the `voice` parameter in the `text_to_speech` function. Available options are "alloy", "echo", "fable", "onyx", "nova", and "shimmer".
+- To adjust the speed of audio playback, modify the `speed` parameter in the `text_to_speech` function. The default value is 1.0.
 
 ## Troubleshooting
 
